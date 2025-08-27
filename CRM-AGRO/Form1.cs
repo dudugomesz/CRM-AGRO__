@@ -18,7 +18,7 @@ namespace CRM_AGRO
 
         public static class ConexaoBD
         {
-            public static string conexao = "Server=localhost;Database=crm_agro;Uid=root;Pwd=;";
+            public static string conexao = "Server=127.0.0.1;Port=3306;Database=agro;Uid=root;Pwd=;";
         }
         public class cliente
         {
@@ -41,7 +41,7 @@ namespace CRM_AGRO
         {
             cliente novoCliente = new cliente
             {
-                nome_empresa = txtNome_empresa.Text,
+                nome_empresa = txtNome_empresa.Text, //aaaaaa
                 categoria_cliente = txtCatego_cliente.Text,
                 pessoa_contato = txtPessoaCtt.Text,
                 forma_contato = txtForma_contato.Text,
@@ -54,16 +54,16 @@ namespace CRM_AGRO
                 conn.Open();
 
                 string query = @"INSERT INTO clientes 
-                                (nome_empresa, categoria_cliente, pessoa_contato, forma_contato, localizacao_cliente, status_cliente) 
-                                 VALUES (@nome_empresa, @categoria_cliente, @pessoa_ctt, @forma_ctt, @localizacao, @status)";
+                                (nome_empresa, categoria_cliente, pessoa_ctt, forma_ctt, localizacao, status_cliente) 
+                                 VALUES (@nome_empresa, @categoria_cliente, @pessoa_ctt, @forma_ctt, @localizacao, @status_cliente)";
 
                 MySqlCommand cmdCliente = new MySqlCommand(query, conn);
                 cmdCliente.Parameters.AddWithValue("@nome_empresa", txtNome_empresa.Text);
                 cmdCliente.Parameters.AddWithValue("@categoria_cliente", txtCatego_cliente.Text);
                 cmdCliente.Parameters.AddWithValue("@pessoa_ctt", txtPessoaCtt.Text);
                 cmdCliente.Parameters.AddWithValue("@forma_ctt", txtForma_contato.Text);
-                cmdCliente.Parameters.AddWithValue("@localizacao_cliente", txtLocCliente.Text);
-                cmdCliente.Parameters.AddWithValue("@status", comboBoxSTS.Text);
+                cmdCliente.Parameters.AddWithValue("@localizacao", txtLocCliente.Text);
+                cmdCliente.Parameters.AddWithValue("@status_cliente", comboBoxSTS.Text);
 
                 int clienteID = Convert.ToInt32(cmdCliente.ExecuteScalar());
                 conn.Close();

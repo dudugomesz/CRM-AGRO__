@@ -19,7 +19,7 @@ namespace CRM_AGRO
         }
         public static class ConexaoBD
         {
-            public static string conexao = "Server=localhost;Database=crm_agro;Uid=root;Pwd=;";
+            public static string conexao = "Server=127.0.0.1;Port=3306;Database=agro;Uid=root;Pwd=;";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -38,7 +38,7 @@ namespace CRM_AGRO
             {
                 conn.Open();
 
-                string query = @"INSERT INTO vendas (safra, tipo_grao, quantidade, valor) 
+                string query = @"INSERT INTO vendas (safra, grao, qtd, valor) 
                                  VALUES (@safra, @grao, @qtd, @valor)";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -48,9 +48,12 @@ namespace CRM_AGRO
                 cmd.Parameters.AddWithValue("@valor", txtValor.Text);
 
                 cmd.ExecuteNonQuery();
+                long idVenda = cmd.LastInsertedId;
                 conn.Close();
 
                 MessageBox.Show("Venda registrada com sucesso!");
+                Formlogistica telaLog = new Formlogistica();
+                telaLog.Show();
             }
         }
     }
