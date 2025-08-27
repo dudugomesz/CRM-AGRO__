@@ -41,7 +41,7 @@ namespace CRM_AGRO
         {
             cliente novoCliente = new cliente
             {
-                nome_empresa = txtNome_empresa.Text,
+                nome_empresa = txtNome_empresa.Text, //aaaaaa
                 categoria_cliente = txtCatego_cliente.Text,
                 pessoa_contato = txtPessoaCtt.Text,
                 forma_contato = txtForma_contato.Text,
