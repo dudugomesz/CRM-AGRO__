@@ -43,17 +43,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(245, 30);
+            label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(230, 29);
             label1.Name = "label1";
-            label1.Size = new Size(265, 45);
+            label1.Size = new Size(342, 45);
             label1.TabIndex = 0;
-            label1.Text = "Fazer Uma Venda";
+            label1.Text = "Cadastrar Uma Venda";
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.ForeColor = SystemColors.MenuHighlight;
             label2.Location = new Point(230, 118);
             label2.Name = "label2";
             label2.Size = new Size(52, 25);
@@ -70,6 +71,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.ForeColor = SystemColors.MenuHighlight;
             label3.Location = new Point(230, 207);
             label3.Name = "label3";
             label3.Size = new Size(50, 25);
@@ -87,6 +89,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.ForeColor = SystemColors.MenuHighlight;
             label4.Location = new Point(230, 279);
             label4.Name = "label4";
             label4.Size = new Size(105, 25);
@@ -103,6 +106,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.ForeColor = SystemColors.MenuHighlight;
             label5.Location = new Point(230, 351);
             label5.Name = "label5";
             label5.Size = new Size(52, 25);

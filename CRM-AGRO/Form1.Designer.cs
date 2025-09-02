@@ -47,6 +47,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.ForeColor = SystemColors.MenuHighlight;
             label1.Location = new Point(243, 115);
             label1.Name = "label1";
             label1.Size = new Size(159, 25);
@@ -56,6 +57,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.ForeColor = SystemColors.MenuHighlight;
             label2.Location = new Point(477, 115);
             label2.Name = "label2";
             label2.Size = new Size(157, 25);
@@ -72,6 +74,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.ForeColor = SystemColors.MenuHighlight;
             label3.Location = new Point(243, 220);
             label3.Name = "label3";
             label3.Size = new Size(154, 25);
@@ -88,6 +91,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.ForeColor = SystemColors.MenuHighlight;
             label4.Location = new Point(477, 220);
             label4.Name = "label4";
             label4.Size = new Size(159, 25);
@@ -97,6 +101,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.ForeColor = SystemColors.MenuHighlight;
             label5.Location = new Point(243, 320);
             label5.Name = "label5";
             label5.Size = new Size(170, 25);
@@ -106,6 +111,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.ForeColor = SystemColors.MenuHighlight;
             label6.Location = new Point(477, 320);
             label6.Name = "label6";
             label6.Size = new Size(60, 25);
@@ -144,15 +150,17 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
             label7.Location = new Point(335, 30);
             label7.Name = "label7";
-            label7.Size = new Size(219, 38);
+            label7.Size = new Size(265, 45);
             label7.TabIndex = 15;
             label7.Text = "Cadastro Cliente";
             // 
             // button_salvar
             // 
+            button_salvar.ForeColor = Color.Black;
             button_salvar.Location = new Point(394, 412);
             button_salvar.Name = "button_salvar";
             button_salvar.Size = new Size(112, 44);
